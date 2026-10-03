@@ -1,9 +1,9 @@
-bad571ae7620592a2f39f6b8d5cf7c48 *DESCRIPTION
+1bdcc9117263d423756479443b4f8205 *DESCRIPTION
 c4f1add62bedee17f6b1537dd90a5f40 *NAMESPACE
-76dfeda02bb87caceadef0c39492deaf *R/plot.R
-99d365648a3707846a38b08bca26fd24 *R/psi.R
+730229946e49eb830149edcc227d7307 *R/plot.R
+acc2e4dbbe487c4aa1fc50b826e1bba4 *R/psi.R
 8310f954807c906e5d132ec804d8c7d8 *README.md
-92a23b993883c0862fbde7fed3e5a561 *man/plot.psi.Rd
-2542235770ad125b3ac8ae1e1b0d5d9d *man/psi.Rd
+8a6783d63759b172f52f21078ca1e140 *man/plot.psi.Rd
+b5e2b0bb2846d9987d98be62d6a58436 *man/psi.Rd
 8ce9bc96f92bfb4f46702134053dd858 *tests/testthat.R
-15d423f97ba648002a0ab8233bfea536 *tests/testthat/test-plot.R
+0d4d261cd34350db1aa528771c4a3d86 *tests/testthat/test-plot.R

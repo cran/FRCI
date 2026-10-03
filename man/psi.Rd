@@ -4,22 +4,22 @@
 \alias{psi}
 \title{Fuzzy & Randomized Confidence Intervals}
 \usage{
-psi(method, distribution = "bernoulli", n = 1, sigma = 1)
+psi(distribution = "bernoulli", method = "GM", n = 1, sigma = 1)
 }
 \arguments{
+\item{distribution}{name of the distribution of the sample.
+\itemize{
+ \item "normal" for the normal distribution.
+ \item "bernoulli" for the Bernoulli or binomial distribution.
+ \item "poisson" for the Poisson distribution.
+}}
+
 \item{method}{numeric value or name of the method that defines how obtain confidence intervals.
 \itemize{
  \item A numeric value utilizes the value as reference.
  \item "GM" utilize the Gayer-Meeden method.
  \item "AC" utilize the Agrest-Coull method (for the binomial distribution only).
  \item "SC" utilizes the score method (for the poisson distribution only).
-}}
-
-\item{distribution}{name of the distribution of the sample.
-\itemize{
- \item "normal" for the normal distribution.
- \item "bernoulli" for the Bernoulli or binomial distribution.
- \item "poisson" for the Poisson distribution.
 }}
 
 \item{n}{sample size.}
@@ -41,7 +41,7 @@ A list containing the following information.
 Function to create "psi" type objects.
 }
 \examples{
-x<-psi("GM",n=10)
+x<-psi(distribution = "bernoulli", method = "GM", n = 10)
 x[[1]](0.3,2)
 x[[2]]
 x[[3]]
@@ -49,7 +49,7 @@ x[[4]]
 x[[5]]
 x[[6]](2)
 
-x<-psi(0.5,n=10)
+x<-psi(distribution = "bernoulli", method = 0.5, n = 10)
 x[[1]](0.6,8)
 x[[2]]
 x[[3]]

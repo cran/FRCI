@@ -4,10 +4,19 @@
 \alias{plot.psi}
 \title{Plot for "psi" type objects.}
 \usage{
-\method{plot}{psi}(x, ..., psi2 = NULL, gamma = 0.95, xlim = NULL, ylim = NULL, type = "psi")
+\method{plot}{psi}(
+  x,
+  ...,
+  gamma = 0.95,
+  type = "psi",
+  xlim = NULL,
+  tlim = NULL,
+  yval = NULL,
+  ylim = NULL
+)
 }
 \arguments{
-\item{x}{A list containing the following information.
+\item{x}{A "psi" type object, list containing the following information.
 \describe{
   \item{[[1]]}{the membership function}
   \item{[[2]]}{the name of the sample distribution}
@@ -17,25 +26,19 @@
   \item{[[6]]}{the upper and lower bound function of the support of the membership function.}
 }}
 
-\item{...}{generic plot parameter.}
-
-\item{psi2}{Another list containing the following information.
-\describe{
- \item{[[1]]}{the membership function}
- \item{[[2]]}{the name of the sample distribution}
- \item{[[3]]}{sample size}
- \item{[[4]]}{the name of method}
- \item{[[5]]}{standard deviation (for the case of normal distribution).}
- \item{[[6]]}{the upper and lower bound function of the support of the membership function.}
-}}
+\item{...}{Other objects of the "psi" type.}
 
 \item{gamma}{the confidence level.}
 
-\item{xlim}{A vector containing the upper and lower values for the theta.}
-
-\item{ylim}{A vector containing the values of omega to be included in the plot.}
-
 \item{type}{The type of the plot, by default is the menbership function, and "length" for the expected length plot.}
+
+\item{xlim}{A vector containing the upper and lower values for the x-axis of the plot.}
+
+\item{tlim}{A vector containing the upper and lower values for theta.}
+
+\item{yval}{A vector containing the values of omega to be included in the plot. (for type = "psi" only)}
+
+\item{ylim}{A vector containing the upper and lower values for the y-axis of the plot. (for type = "length" only)}
 }
 \value{
 No return value, called for side effects
@@ -44,11 +47,11 @@ No return value, called for side effects
 Plot for "psi" type objects.
 }
 \examples{
-x<-psi("GM",n=10)
+x<-psi(distribution = "bernoulli", method = "GM", n = 10)
 plot(x)
-plot(x,type="length")
+plot(x, type = "length")
 
-x<-psi(0.5,n=10)
+x<-psi(distribution = "bernoulli", method = 0.5, n = 10)
 plot(x)
-plot(x,type="length")
+plot(x, type = "length")
 }
